@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { OperationalExecutiveRoutingModule } from './operational-executive-routing.module';
 import { ViewRegisterComponent } from './view-register/view-register.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     OperationalExecutiveRoutingModule,
+    ReactiveFormsModule
     
   ]
 })

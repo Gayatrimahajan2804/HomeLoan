@@ -23,6 +23,6 @@ export class MenuComponent implements OnInit{
 navigateTo(link:string)
 {
   // this.router.navigateByUrl('/re/userdash/'+this.type+"/"+link)
-  this.router.navigateByUrl('userdash/'+this.type+"/"+link)
+  this.router.navigateByUrl('/userdash/'+this.type+"/"+link)
 }
 }

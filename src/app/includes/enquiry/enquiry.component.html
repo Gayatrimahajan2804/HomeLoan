@@ -1,15 +1,15 @@
 <div class="loan-inquiry-form">
   <h2>Home Loan Enquiry</h2>
   
-  <form (ngSubmit)="submitInquiry()" #loanInquiryForm="ngForm">
+  <form (ngSubmit)="submitInquiry()" [formGroup]="loanInquiryForm">
     <div class="form-group">
       <label for="fullName">Full Name:</label>
-      <input type="text" id="fullName" name="fullName" ngModel required>
+      <input type="text" id="fullName" name="fullName"  required>
     </div>
 
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" ngModel required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+      <input type="email" id="email" name="email"  required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
       <div *ngIf="loanInquiryForm.controls['email'].invalid && (loanInquiryForm.controls['email'].dirty || loanInquiryForm.controls['email'].touched)">
         <small class="error-text">Please enter a valid email address.</small>
       </div>
@@ -17,7 +17,7 @@
 
     <div class="form-group">
       <label for="phoneNumber">Phone Number:</label>
-      <input type="tel" id="phoneNumber" name="phoneNumber" ngModel required pattern="[0-9]{10}">
+      <input type="tel" id="phoneNumber" name="phoneNumber"  required pattern="[0-9]{10}">
       <div *ngIf="loanInquiryForm.controls['phoneNumber'].invalid && (loanInquiryForm.controls['phoneNumber'].dirty || loanInquiryForm.controls['phoneNumber'].touched)">
         <small class="error-text">Please enter a 10-digit phone number.</small>
       </div>
@@ -25,12 +25,12 @@
 
     <div class="form-group">
       <label for="dateOfBirth">Date:</label>
-      <input type="date" id="dateOfBirth" name="Todaydate" ngModel required>
+      <input type="date" id="dateOfBirth" name="Todaydate"  required>
     </div>
 
     <div class="form-group">
       <label for="panCard">PAN Card:</label>
-      <input type="text" id="panCard" name="panCard" ngModel required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}">
+      <input type="text" id="panCard" name="panCard"  required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}">
       <div *ngIf="loanInquiryForm.controls['panCard'].invalid && (loanInquiryForm.controls['panCard'].dirty || loanInquiryForm.controls['panCard'].touched)">
         <small class="error-text">Please enter a valid PAN card number.</small>
       </div>
@@ -38,7 +38,7 @@
 
     <div class="form-group">
       <label for="loanAmount">Loan Amount:</label>
-      <input type="number" id="loanAmount" name="loanAmount" ngModel required>
+      <input type="number" id="loanAmount" name="loanAmount"  required>
     </div>
 
     <!-- Add more form fields as needed -->

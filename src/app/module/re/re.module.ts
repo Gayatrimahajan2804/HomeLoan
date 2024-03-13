@@ -5,17 +5,21 @@ import { ReRoutingModule } from './re-routing.module';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ViewEnquiryComponent } from './view-enquiry/view-enquiry.component';
 import { ViewLoanComponent } from './view-loan/view-loan.component';
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
-console.log("RelationalExecutive module load..!")
 @NgModule({
   declarations: [
     FeedbackComponent,
     ViewEnquiryComponent,
-    ViewLoanComponent
+    ViewLoanComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
-    ReRoutingModule
+    ReRoutingModule,
+    ReactiveFormsModule
+
   ]
 })
 export class ReModule { }

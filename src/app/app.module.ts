@@ -12,9 +12,9 @@ import { LoginComponent } from './includes/login/login.component';
 import { UserDashBoardComponent } from './includes/user-dash-board/user-dash-board.component';
 import { UserHeaderComponent } from './includes/user-header/user-header.component';
 import { MenuComponent } from './includes/menu/menu.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './includes/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,15 +27,15 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     UserDashBoardComponent,
     UserHeaderComponent,
-    MenuComponent,
-    RegisterComponent
+    MenuComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

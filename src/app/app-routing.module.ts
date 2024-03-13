@@ -7,7 +7,7 @@ import { LocationComponent } from './templete/location/location.component';
 import { EnquiryComponent } from './includes/enquiry/enquiry.component';
 import { LoginComponent } from './includes/login/login.component';
 import { UserDashBoardComponent } from './includes/user-dash-board/user-dash-board.component';
-import { RegisterComponent } from './includes/register/register.component';
+import { RegisterComponent } from './module/re/register/register.component';
 
 const routes: Routes = [
   {
@@ -31,9 +31,7 @@ const routes: Routes = [
       {
         path:'login', component:LoginComponent
       },
-      {
-        path:'register', component:RegisterComponent
-      },
+      
     ]
   },
   {

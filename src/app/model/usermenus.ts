@@ -14,7 +14,8 @@ export class Usermenus {
         re:[
             { lable:'View New Enquiry', link:'view_enquiry'},
             { lable:'Send Enquiry Feedback', link:'feedback'},
-            {lable:'Check Loan Application',link:'view_loan_app'}
+            {lable:'Check Loan Application',link:'view_loan_app'},
+            {lable:'Register',link:'reg'},
         ],
         operationalexecutive:[
             { lable:'View New Registration', link:'view_register'}
