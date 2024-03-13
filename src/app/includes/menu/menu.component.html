@@ -1,0 +1,10 @@
+<div class="w-70 bg-dark menu">
+    <h4 class="text-white">welcome To Appna Finance</h4>
+  
+    <div *ngFor="let button of userOption[0][type]" class="d-flex justfy-content-center">
+        <button class="btn btn-danger mt-2" (click)="navigateTo(button.link)">{{button.lable}}</button>
+
+    </div>
+</div>
+
+

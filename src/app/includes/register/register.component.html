@@ -1,0 +1,115 @@
+<h1>Register Form</h1>
+<form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+    <div *ngIf="registerForm.controls['customerFName'].touched && registerForm.controls['customerFName'].invalid">
+    <span style="color: red;" *ngIf="registerForm.controls['customerFName'].hasError('required')">* customer full name is Required</span>
+    </div>
+    <label for="fn">Customer First Name:-</label>
+    <input type="text" id="fn" formControlName="customerFName">
+    <br>
+    <br> 
+
+
+    <div *ngIf="registerForm.controls['customerMName'].touched && registerForm.controls['customerMName'].invalid">
+    <span style="color: red;" *ngIf="registerForm.controls['customerMName'].hasError('required')">* customer Middle name is Required</span>
+     </div>
+     <label for="fn">Customer Middle Name:-</label>
+     <input type="text" id="fn" formControlName="customerMName">
+     <br>
+    <br>
+
+    <div *ngIf="registerForm.controls['customerLName'].touched && registerForm.controls['customerLName'].invalid">
+    <span style="color: red;" *ngIf="registerForm.controls['customerLName'].hasError('required')">* customer Last name is Required</span>
+    </div>
+    <label for="fn">Customer Last Name:-</label>
+    <input type="text" id="fn" formControlName="customerLName">
+    <br>
+    <br>
+
+    <div *ngIf="registerForm.controls['customerEmail'].touched && registerForm.controls['customerEmail'].invalid">
+        <span style="color: red;" *ngIf="registerForm.controls['customerEmail'].hasError('required')">* Customer Email is Required</span>
+     </div>
+      <label for="fn">Customer EmailId:-</label>
+      <input type="email" id="fn" formControlName="customerEmail"  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+      <br>
+      <br>
+
+
+      <div *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].invalid">
+        <span style="color: red;" *ngIf="registerForm.controls['password'].hasError('required')">* Customer Password is Required</span>
+     </div>
+      <label for="fn">Password:-</label>
+      <input type="email" id="fn" formControlName="password"  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+      <br>
+      <br> 
+
+
+      <div *ngIf="registerForm.controls['confirmPassword'].touched && registerForm.controls['confirmPassword'].invalid">
+        <span style="color: red;" *ngIf="registerForm.controls['confirmPassword'].hasError('required')">* Confirm Password</span>
+     </div>
+      <label for="fn">Password:-</label>
+      <input type="email" id="fn" formControlName="confirmPassword"  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+      <br>
+      <br> 
+
+      <div *ngIf="registerForm.controls['username'].touched && registerForm.controls['username'].invalid">
+         <span style="color: red;" *ngIf="registerForm.controls['username'].hasError('required')">* Customer username is Required</span>
+      </div>
+       <label for="fn">Password:-</label>
+       <input type="email" id="fn" formControlName="username"  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+       <br>
+       <br> 
+      
+       <div *ngIf="registerForm.controls['mobileNo'].touched && registerForm.controls['mobileNo'].invalid">
+         <span style="color: red;" *ngIf="registerForm.controls['mobileNo'].hasError('required')">* Customer contact is Required</span>
+         <span  style="color: red;" *ngIf="registerForm.controls['mobileNo'].hasError('pattern')">* Please Enter 10 digit Mobile Number.</span>
+      </div>
+       <label for="fn">Customer Contact:-</label>
+       <input type="number" id="fn" formControlName="mobileNo">
+       <br>
+       <br>
+
+       <div *ngIf="registerForm.controls['panCardNo'].touched && registerForm.controls['panCardNo'].invalid">
+         <span style="color: red;" *ngIf="registerForm.controls['panCardNo'].hasError('required')">* Customer PAN details are Required</span>
+      </div>
+       <label for="fn">Cutomer PAN Details:-</label>
+       <input type="text" id="fn" formControlName="panCardNo">
+       <br>
+       <br>
+
+       <div *ngIf="registerForm.controls['adharNo'].touched && registerForm.controls['adharNo'].invalid">
+         <span style="color: red;" *ngIf="registerForm.controls['adharNo'].hasError('required')">* Customer adhar details are Required</span>
+      </div>
+       <label for="fn">Cutomer Adhar Details:-</label>
+       <input type="text" id="fn" formControlName="adharNo">
+       <br>
+       <br>
+
+       <div *ngIf="registerForm.controls['age'].touched && registerForm.controls['age'].invalid">
+         <span style="color: red;" *ngIf="registerForm.controls['age'].hasError('required')">*Enter Customer valid age</span>
+      </div>
+       <label for="fn">Cutomer Age:-</label>
+       <input type="text" id="fn" formControlName="age">
+       <br>
+       <br>
+
+       <div *ngIf="registerForm.controls['gender'].touched && registerForm.controls['gender'].invalid">
+         <span style="color: red;" *ngIf="registerForm.controls['gender'].hasError('required')">* Enquiry date is Required</span>
+      </div>
+       <label for="fn">gender:-</label>
+       <input type="date" id="fn" formControlName="gender">
+       <br>
+       <br>
+      
+     <div *ngIf="registerForm.controls['customerAddress'].touched && registerForm.controls['customerAddress'].invalid">
+       <span style="color: red;" *ngIf="registerForm.controls['customerAddress'].hasError('required')">* Customer Address is Required</span>
+    </div>       
+    <label for="fn">Customer Address:-</label>
+    <input type="text" id="fn" formControlName="customerAddress">
+    <br>
+    <br>
+    
+    
+   
+    <button type="submit" [disabled]="registerForm.invalid" class="btn btn-success"><i class="fa fa-floppy-o" aria-hidden="true">Enquiry</i></button>
+</form>

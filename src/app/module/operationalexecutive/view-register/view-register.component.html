@@ -1,0 +1,43 @@
+
+
+<div *ngIf="!registerData">Loading Register data...</div>
+<div *ngIf="registerData">
+  <h2>Register Details</h2>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>customerFName</th>
+        <th>customerMName</th>
+        <th>customerLName</th>
+        <th>customerEmail</th>
+        <th>password</th>
+        <th>confirmPassword</th>
+        <th>username</th>
+        <th> mobileNo</th>
+        <th>panCardNo</th>
+        <th> adharNo</th>
+        <th>age</th>
+        <th>gender</th>
+        <th>customerAddress</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reg of registerData">
+        <td>{{ reg.customerFName }}</td>
+        <td>{{ reg.customerMName }}</td>
+        <td>{{ reg.customerLName }}</td>
+        <td>{{ reg.customerEmail }}</td>
+        <td>{{ reg.password }}</td>
+        <td>{{ reg.confirmPassword }}</td>
+        <td>{{ reg.username}}</td>
+        <td>{{reg.mobileNo}}</td>
+        <td>{{reg.panCardNo}}</td>
+        <td>{{reg.adharNo}}</td>
+        <td>{{reg.age}}</td>
+        <td>{{reg.gender}}</td>
+        <td>{{reg.customerAddress}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
